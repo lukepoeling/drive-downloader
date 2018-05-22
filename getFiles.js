@@ -13,7 +13,7 @@ const listFiles = ( auth, options ) => {
   service.files.list({
     q: "mimeType='image/jpeg'",
     auth: auth,
-    spaces: 'photos',
+    spaces: 'drive',
     maxResults: 1000,
   }, (err, response) => {
     if (err) {
@@ -29,7 +29,7 @@ const listFiles = ( auth, options ) => {
         () => i <= files.length-1,
         (innerCallback) => {
           var file = files[i];
-          const path = `/${options.dest }/${file.id}.jpg`
+          const path = `/${options.dest}/${file.id}.jpg`
           if( !fs.existsSync(path) ){
             downloadFile( file, path, service, auth )
             setTimeout(() => { i++; innerCallback(); }, 1000);

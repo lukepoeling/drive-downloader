@@ -6,7 +6,7 @@ const googleAuth = require('google-auth-library');
 // at ~/.credentials/drive-nodejs-quickstart.json
 // const SCOPES = ['https://www.googleapis.com/auth/drive.readonly'];
 //const SCOPES = ['https://www.googleapis.com/auth/drive.photos.readonly','https://www.googleapis.com/auth/drive.readonly'];
-const SCOPES = ['https://www.googleapis.com/auth/drive.photos.readonly'];
+const SCOPES = ['https://www.googleapis.com/auth/drive.readonly'];
 const TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
     process.env.USERPROFILE) + '/.credentials/';
 const TOKEN_PATH = TOKEN_DIR + 'drive-nodejs-quickstart.json';

@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "$npm_package_bin_download"
   },
   "bin": {
-    "download-pictures": "bin/download.js"
+    "download": "bin/download.js"
   },
   "author": "",
   "license": "ISC",
