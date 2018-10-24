@@ -29,13 +29,14 @@ const listFiles = ( auth, options ) => {
         () => i <= files.length-1,
         (innerCallback) => {
           var file = files[i];
-          const path = `/${options.dest}/${file.id}.jpg`
+          const path = `/${options.dest}/${file.id}.jpg`;
+          const callBack = () => { i++; innerCallback(); };
           if( !fs.existsSync(path) ){
             downloadFile( file, path, service, auth )
-            setTimeout(() => { i++; innerCallback(); }, 1000);
+            setTimeout(callBack, 1000);
           } else {
             console.log(`Skipping ${file.originalFilename}`)
-            setTimeout(() => { i++; innerCallback(); }, 10);
+            setTimeout(callBack, 10);
           }
         },
         () => console.log(`All files done ${new Date()}`)
