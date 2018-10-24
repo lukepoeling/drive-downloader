@@ -1,0 +1,20 @@
+{
+  "name": "frame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "$npm_package_bin_download"
+  },
+  "bin": {
+    "download": "bin/download.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.0-rc.2",
+    "command-line-args": "^2.1.6",
+    "google-auth-library": "^0.9.7",
+    "googleapis": "^3.1.0"
+  }
+}
