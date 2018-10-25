@@ -8,5 +8,4 @@ const cli = commandLineArgs([
 ])
 
 const options = cli.parse()
-//console.log(JSON.stringify(options))
 getFiles(options)
