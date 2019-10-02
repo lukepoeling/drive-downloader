@@ -14,7 +14,7 @@
   "dependencies": {
     "async": "^2.0.0-rc.2",
     "command-line-args": "^2.1.6",
-    "google-auth-library": "^0.9.7",
-    "googleapis": "^3.1.0"
+    "googleapis": "^3.1.0",
+    "google-auth-library": "^0.9.7"
   }
 }
