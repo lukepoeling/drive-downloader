@@ -30,10 +30,10 @@ const listFiles = ( auth, options ) => {
         (innerCallback) => {
           var file = files[i]
           const path = `/${options.dest}/${file.id}.jpg`
-          const callBack = () => { i++; innerCallback(); }
+          const callBack = () => { i++; innerCallback() }
           if( !fs.existsSync(path) ){
             downloadFile( file, path, service, auth )
-            setTimeout(callBack, 1000);
+            setTimeout(callBack, 1000)
           } else {
             console.log(`Skipping ${file.originalFilename}`)
             setTimeout(callBack, 10)
@@ -48,12 +48,12 @@ const listFiles = ( auth, options ) => {
 
 const downloadFile = ( file, path, service, auth ) => {
     console.log(`Downloading ${file.originalFilename}`)
-    const dest = fs.createWriteStream(path);
+    const dest = fs.createWriteStream(path)
     const stream = service.files.get({ auth: auth, fileId: file.id, alt: 'media' })
     .on('error', err => {
       console.log('Error during download', err)
     })
-    .pipe(dest);
+    .pipe(dest)
 
     stream.on('finish', ()=> dest.end())
 }
