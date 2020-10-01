@@ -45,6 +45,9 @@ const listFiles = ( auth, options ) => {
   })
 }
 
+/**
+ * Download the file
+ */
 
 const downloadFile = ( file, path, service, auth ) => {
     console.log(`Downloading ${file.originalFilename}`)
