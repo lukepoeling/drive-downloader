@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 const getFiles = require('../getFiles')
-const commandLineArgs = require('command-line-args');
+const commandLineArgs = require('command-line-args')
 
 
 const cli = commandLineArgs([
